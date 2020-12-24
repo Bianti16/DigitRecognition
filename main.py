@@ -1,8 +1,10 @@
 ## Importing libraries
 import math
 import numpy as np
-import matplotlib.pyplot as plt
 from drawing_canvas import MyApp
+
+## The code for processing the data and creating the model is commented out, because we don't need to do that
+## everytime we run the program
 
 # from tensorflow import keras
 
@@ -34,8 +36,7 @@ from drawing_canvas import MyApp
 #     keras.layers.Flatten(input_shape=(28, 28)),
 #     keras.layers.Dense(128, activation='relu'),
 #     keras.layers.Dense(16, activation='relu'),
-#     keras.layers.Dense(10, activation='softmax')
-# ])
+#     keras.layers.Dense(10, activation='softmax')])
 #
 # model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 #
@@ -46,21 +47,6 @@ from drawing_canvas import MyApp
 
 ## Getting the model
 # model = keras.models.load_model('digit_recognition_model')
-
-## Testing the model
-# class_names = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-#
-# prediction = model.predict(test_data)
-# for i in range(5):
-#     plt.grid(False)
-#     plt.imshow(test_data[i], cmap=plt.cm.binary)
-#     plt.xlabel('Actual value: ' + class_names[test_labels[i]])
-#     plt.title('Prediction: ' + class_names[np.argmax(prediction[i])])
-#     plt.show()
-
-## Predicting a single image
-# prediction = model.predict([[test_data[7]]])
-# print('Prediction: ', class_names[np.argmax(prediction)])
 
 ## Running the app
 if __name__ == '__main__':
